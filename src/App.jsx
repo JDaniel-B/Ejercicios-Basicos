@@ -14,16 +14,18 @@ import Register from "./pages/Register";
 function App() {
   library.add(fas);
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/Ejercicio1" element={<Ejercicio1 />} />
-      <Route path="/Ejercicio2" element={<Ejercicio2 />} />
-      <Route path="/Ejercicio3" element={<Ejercicio3 />} />
-      <Route path="/Ejercicio4" element={<Ejercicio4 />} />
-      <Route path="/Ejercicio5" element={<Ejercicio5 />} />
-      <Route path="/Ejercicio6" element={<Ejercicio6 />} />
-      <Route path="/Register" element={<Register />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Ejercicio1" element={<Ejercicio1 />} />
+        <Route path="/Ejercicio2" element={<Ejercicio2 />} />
+        <Route path="/Ejercicio3" element={<Ejercicio3 />} />
+        <Route path="/Ejercicio4" element={<Ejercicio4 />} />
+        <Route path="/Ejercicio5" element={<Ejercicio5 />} />
+        <Route path="/Ejercicio6" element={<Ejercicio6 />} />
+        <Route path="/Register" element={<Register />} />
+      </Routes>
+    </>
   );
 }
 
