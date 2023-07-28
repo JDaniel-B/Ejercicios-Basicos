@@ -24,6 +24,7 @@ function App() {
         <Route path="/Ejercicio5" element={<Ejercicio5 />} />
         <Route path="/Ejercicio6" element={<Ejercicio6 />} />
         <Route path="/Register" element={<Register />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </>
   );
