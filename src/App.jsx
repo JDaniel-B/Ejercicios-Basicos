@@ -8,7 +8,7 @@ import Ejercicio2 from "./pages/Ejercicio2";
 import Ejercicio3 from "./pages/Ejercicio3";
 import Ejercicio5 from "./pages/Ejercicio5";
 import Ejercicio6 from "./pages/ejercicio6";
-import Ejercicio4 from "./pages/ejercicio4";
+import Ejercicio4 from "./pages/Ejercicio4";
 import Register from "./pages/Register";
 
 function App() {
