@@ -1,0 +1,17 @@
+@import '../styles/Mixins';
+
+.Content {
+  @include FlexBox(center, space-evenly, row);
+  padding: 5px 0;
+
+  &__Count {
+    @include FlexBox(center, center, row);
+    gap: 20px;
+
+    button {
+      padding: 0 5px;
+      background-color: #ffffff;
+      font-size: 1.3rem;
+    }
+  }
+}

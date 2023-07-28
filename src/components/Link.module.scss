@@ -1,0 +1,79 @@
+.Button {
+  box-shadow: 0 0 5px skyblue, 0 0 25px skyblue;
+  color: #fff;
+  animation: .8s ease-in-out both show;
+  transition: box-shadow 0.8s ease, transform 0.5s ease;
+  letter-spacing: 3px;
+
+  &:hover {
+    box-shadow: 0 0 5px skyblue, 0 0 25px skyblue, 0 0 50px skyblue,
+      0 0 100px skyblue, 0 0 200px skyblue;
+    transform: perspective(100px) translateZ(5px);
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@for $i from 1 through 8 {
+  .Button {
+    &:nth-child(#{$i}) {
+      // Delay the animation. Delay increases as items loop.
+      animation-delay: $i * (0.07s);
+    }
+  }
+}
+
+.ButtonHome {
+  top: 0;
+  margin: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  font-weight: 100;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s ease all;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+
+  &__Span {
+    transition: 0.4s ease-in-out all;
+    position: absolute;
+    left: 17%;
+  }
+
+  &__Icono {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    right: -40px;
+    transition: 0.3s ease-in-out all;
+    opacity: 0;
+  }
+
+  &:hover &__Icono {
+    right: calc(100% - 50px);
+    opacity: 1;
+  }
+
+  &:hover &__Span {
+    left: 60px;
+  }
+}

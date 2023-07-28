@@ -1,0 +1,117 @@
+@import "../styles/Mixins";
+
+.Container {
+  padding: 20px;
+  @include FlexBox(flex-start, flex-start, column);
+  min-height: 100vh;
+  row-gap: 30px;
+
+  form {
+    align-self: center;
+    justify-content: center;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  &__Form {
+    align-self: center;
+    justify-content: center;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .Tittle {
+    font-size: 30px;
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
+  &__Input {
+    display: flex;
+    @include FlexBox(center, center, row);
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+}
+
+.ContainerPizza {
+  padding: 30px 60px;
+  @include FlexBox(flex-start, flex-start, column);
+  min-height: 100vh;
+  row-gap: 50px;
+  background-image: url(https://www.pizzahut.com.gt/static/media/menu/webp/background-mx.webp);
+}
+
+.Grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-auto-rows: auto;
+  column-gap: 20px;
+  row-gap: 60px;
+  place-content: center;
+  justify-items: center;
+
+  @media only screen and (max-width: 350px) {
+    & {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+}
+
+.GridNotas {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: auto;
+  gap: 20px;
+  place-content: center;
+  justify-items: center;
+
+  @media only screen and (max-width: 350px) {
+    & {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+}
+
+.GridPizza {
+  width: 100%;
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: auto;
+  gap: 20px;
+  place-content: center;
+  justify-items: center;
+
+  @media only screen and (max-width: 350px) {
+    & {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+}
+
+.ContainerLogin {
+  @include FlexBox(flex-start, flex-start, column);
+  row-gap: 50px;
+  padding: 20px;
+  min-height: 100vh;
+  min-width: 100vh;
+  background-color: #000000b2;
+
+  form {
+    height: 500px;
+    width: 400px;
+    align-self: center;
+    background-color: #ffffff8c;
+    @include FlexBox(center, center, column);
+    border-radius: 5px;
+    row-gap: 20px;
+  }
+}
